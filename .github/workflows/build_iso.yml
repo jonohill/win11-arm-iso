@@ -13,6 +13,7 @@ jobs:
       - name: uup download
         shell: powershell
         run: |
+          fsutil behavior set disablecompression 0
           cd uup
           ./uup_download_windows.cmd
           tree /F
