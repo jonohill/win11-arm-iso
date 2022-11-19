@@ -10,9 +10,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - run: |
-          pwsh --version
-          Import-Module Microsoft.PowerShell.Utility
+      - name: uup download
+        shell: powershell
+        run: |
           cd uup
           ./uup_download_windows.cmd
           tree /F
