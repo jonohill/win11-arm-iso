@@ -9,6 +9,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - uses: actions/checkout@v3
       - run: |
           cd uup
           uup_download_windows.cmd
