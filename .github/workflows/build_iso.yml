@@ -11,6 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
+          pwsh --version
+          Get-Module -ListAvailable | Import-Module
           cd uup
           ./uup_download_windows.cmd
           tree /F
