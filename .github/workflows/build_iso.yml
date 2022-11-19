@@ -1,0 +1,15 @@
+name: Build ISO
+
+on:
+  - push
+
+jobs:
+  build:
+    name: Build ISO
+    runs-on: windows-latest
+
+    steps:
+      - run: |
+          cd uup
+          uup_download_windows.cmd
+          tree /F
