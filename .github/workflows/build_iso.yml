@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v3
       - run: |
           pwsh --version
-          Get-Module -ListAvailable | Import-Module
+          Import-Module Microsoft.PowerShell.Utility
           cd uup
           ./uup_download_windows.cmd
           tree /F
